@@ -732,24 +732,34 @@
       50% { transform: scale(1.025); }
     }
 
-    .back-button {
-      position: absolute;
-      left: 50%;
-      bottom: 28px;
-      transform: translateX(-50%);
-      z-index: 3;
-      border: 0;
-      border-radius: 999px;
-      padding: 12px 24px;
-      background: var(--brown);
-      color: white;
-      font: inherit;
-      font-weight: 800;
-      cursor: pointer;
-      box-shadow: 0 8px 18px rgba(90,44,29,.25);
-    }
+.back-button {
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    z-index: 3;
 
-    .back-button:active { transform: translateX(-50%) scale(.97); }
+    padding: 6px 13px;
+    font-size: 0.74rem;
+    font-weight: 600;
+
+    border: 0;
+    border-radius: 999px;
+    background: var(--brown);
+    color: #fff;
+    cursor: pointer;
+
+    box-shadow: 0 5px 12px rgba(90,44,29,.18);
+    transition: transform .2s ease;
+}
+
+.back-button:hover {
+    transform: translateX(-50%) scale(1.04);
+}
+
+.back-button:active {
+    transform: translateX(-50%) scale(.96);
+}
 
     .instruction { bottom: 18px; }
 
@@ -776,7 +786,7 @@
       .wish-content h2 { margin-bottom: 10px; }
       .wish-content p { font-size: clamp(.86rem, 3.65vw, .98rem); line-height: 1.52; }
       .wish-content .signature { margin-top: 10px; }
-      .back-button { bottom: 19px; padding: 11px 20px; font-size: .9rem; }
+      .back-button { bottom: 18px; padding: 6px 13px; font-size: .74rem; }
       .instruction { bottom: 10px; width: 94vw; font-size: .82rem; }
     }
 
