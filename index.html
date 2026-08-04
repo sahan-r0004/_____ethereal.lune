@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f8e8dc" />
+  <title>Happy 21st Birthday Love! 💖</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-1: #fff8f3;
+      --bg-2: #f7dfd1;
+      --brown: #9b6038;
+      --brown-dark: #5a2c1d;
+      --brown-light: #bd7a4d;
+      --cream: #f1c89f;
+      --pink: #f3a6aa;
+      --paper: #fffdf8;
+      --gold: #e0aa4d;
+      --shadow: rgba(87, 47, 30, 0.22);
+    }
+
+    * {
+      box-sizing: border-box;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      width: 100%;
+      min-height: 100%;
+      margin: 0;
+    }
+
+    body {
+      overflow-x: hidden;
+      overflow-y: auto;
+      font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.95) 0 8%, transparent 24%),
+        radial-gradient(circle at 80% 25%, rgba(255,255,255,.7) 0 7%, transparent 22%),
+        linear-gradient(145deg, var(--bg-1), var(--bg-2));
+      color: var(--brown-dark);
+    }
+
+    .page {
+      position: relative;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+      isolation: isolate;
+    }
+
+    .page::before,
+    .page::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(8px);
+      opacity: .5;
+      z-index: -1;
+    }
+
+    .page::before {
+      width: 220px;
+      height: 220px;
+      left: -70px;
+      top: -70px;
+      background: #f8c6cb;
+    }
+
+    .page::after {
+      width: 250px;
+      height: 250px;
+      right: -90px;
+      bottom: -100px;
+      background: #f4d28e;
+    }
+
+    .top-copy {
+      position: absolute;
+      top: clamp(18px, 4vh, 42px);
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(92vw, 760px);
+      text-align: center;
+      z-index: 4;
+      pointer-events: none;
+    }
+
+    .top-copy h1 {
+      margin: 0;
+      font-size: clamp(1.55rem, 5vw, 3.2rem);
+      line-height: 1.1;
+      color: var(--brown);
+      text-shadow: 0 3px 0 white;
+    }
+
+    .top-copy p {
+      margin: 10px 0 0;
+      font-size: clamp(.92rem, 2.4vw, 1.1rem);
+      opacity: .78;
+    }
+
+    .scene {
+      position: relative;
+      width: min(92vw, 560px);
+      aspect-ratio: 1 / 1.08;
+      display: grid;
+      place-items: center;
+      user-select: none;
+      touch-action: manipulation;
+    }
+
+    .halo {
+      position: absolute;
+      width: 78%;
+      height: 56%;
+      bottom: 8%;
+      border-radius: 50%;
+      background: radial-gradient(ellipse, rgba(80,35,15,.23), transparent 70%);
+      filter: blur(12px);
+      transform: scaleY(.42);
+      z-index: -1;
+    }
+
+    .bear-button {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      border: 0;
+      background: transparent;
+      cursor: pointer;
+      outline: none;
+    }
+
+    .bear-button:focus-visible {
+      border-radius: 28px;
+      box-shadow: 0 0 0 5px rgba(224,170,77,.45);
+    }
+
+    .bear {
+      position: absolute;
+      inset: 0;
+      transform-origin: 50% 72%;
+      transition: transform .55s ease;
+    }
+
+    .bear-button:active .bear {
+      transform: scale(.985);
+    }
+
+    .ear {
+      position: absolute;
+      width: 21%;
+      aspect-ratio: 1;
+      top: 17%;
+      border-radius: 50%;
+      background: var(--brown);
+      box-shadow: inset -5px -6px 0 rgba(83,40,24,.08);
+      z-index: 1;
+    }
+
+    .ear::after {
+      content: "";
+      position: absolute;
+      inset: 24%;
+      border-radius: 50%;
+      background: var(--brown-dark);
+    }
+
+    .ear.left { left: 18%; transform: rotate(-14deg); }
+    .ear.right { right: 18%; transform: rotate(14deg); }
+
+    .head {
+      position: absolute;
+      width: 60%;
+      height: 48%;
+      left: 20%;
+      top: 20%;
+      border-radius: 47% 47% 44% 44%;
+      background:
+        radial-gradient(circle at 34% 45%, rgba(255,255,255,.11), transparent 24%),
+        var(--brown);
+      box-shadow:
+        inset -8px -10px 0 rgba(86,43,26,.07),
+        0 10px 18px var(--shadow);
+      z-index: 6;
+    }
+
+    .eye {
+      position: absolute;
+      width: 12.5%;
+      aspect-ratio: .9;
+      top: 42%;
+      border-radius: 48%;
+      background: #21130f;
+      box-shadow: inset 0 -4px 0 #090504;
+    }
+
+    .eye::before,
+    .eye::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      background: white;
+    }
+
+    .eye::before {
+      width: 28%;
+      aspect-ratio: 1;
+      left: 18%;
+      top: 16%;
+    }
+
+    .eye::after {
+      width: 14%;
+      aspect-ratio: 1;
+      right: 20%;
+      top: 28%;
+    }
+
+    .eye.left { left: 26%; transform: rotate(-8deg); }
+    .eye.right { right: 26%; transform: rotate(8deg); }
+
+    .brow {
+      position: absolute;
+      width: 8%;
+      height: 2.2%;
+      top: 35%;
+      border-radius: 99px;
+      background: var(--brown-dark);
+      opacity: .72;
+    }
+
+    .brow.left { left: 25%; transform: rotate(-18deg); }
+    .brow.right { right: 25%; transform: rotate(18deg); }
+
+    .blush {
+      position: absolute;
+      width: 12%;
+      height: 6%;
+      top: 57%;
+      border-radius: 50%;
+      background: var(--pink);
+      opacity: .28;
+      filter: blur(1px);
+    }
+
+    .blush.left { left: 12%; }
+    .blush.right { right: 12%; }
+
+    .muzzle {
+      position: absolute;
+      width: 34%;
+      height: 29%;
+      left: 33%;
+      bottom: 7%;
+      border-radius: 48% 48% 45% 45%;
+      background: var(--cream);
+      box-shadow: inset -3px -4px 0 rgba(120,70,40,.08);
+    }
+
+    .nose {
+      position: absolute;
+      width: 35%;
+      height: 28%;
+      left: 32.5%;
+      top: 18%;
+      border-radius: 50% 50% 44% 44%;
+      background: var(--brown-dark);
+    }
+
+    .mouth {
+      position: absolute;
+      width: 35%;
+      height: 30%;
+      left: 32.5%;
+      top: 43%;
+      border-bottom: 4px solid var(--brown-dark);
+      border-radius: 0 0 50% 50%;
+    }
+
+    .mouth::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      top: -2px;
+      width: 4px;
+      height: 62%;
+      transform: translateX(-50%);
+      border-radius: 9px;
+      background: var(--brown-dark);
+    }
+
+    .body {
+      position: absolute;
+      width: 47%;
+      height: 35%;
+      left: 26.5%;
+      top: 57%;
+      border-radius: 45% 45% 40% 40%;
+      background: var(--brown);
+      box-shadow:
+        inset -8px -9px 0 rgba(86,43,26,.07),
+        0 10px 18px var(--shadow);
+      z-index: 2;
+    }
+
+    .belly {
+      position: absolute;
+      width: 54%;
+      height: 57%;
+      left: 23%;
+      top: 27%;
+      border-radius: 48%;
+      background: rgba(190,122,77,.35);
+    }
+
+    .leg {
+      position: absolute;
+      width: 25%;
+      height: 18%;
+      top: 77%;
+      border-radius: 48%;
+      background: var(--brown);
+      box-shadow: 0 8px 14px var(--shadow);
+      z-index: 4;
+    }
+
+    .leg.left { left: 21%; transform: rotate(10deg); }
+    .leg.right { right: 21%; transform: rotate(-10deg); }
+
+    .paw-pad {
+      position: absolute;
+      width: 67%;
+      height: 72%;
+      left: 16.5%;
+      top: 14%;
+      border-radius: 50%;
+      background: var(--cream);
+    }
+
+    .paw-pad::before {
+      content: "";
+      position: absolute;
+      width: 38%;
+      aspect-ratio: 1;
+      left: 31%;
+      top: 40%;
+      border-radius: 50%;
+      background: #a56b43;
+    }
+
+    .toe {
+      position: absolute;
+      width: 16%;
+      aspect-ratio: 1;
+      top: 22%;
+      border-radius: 50%;
+      background: #a56b43;
+    }
+
+    .toe.t1 { left: 17%; }
+    .toe.t2 { left: 42%; top: 14%; }
+    .toe.t3 { right: 17%; }
+
+    .arm {
+      position: absolute;
+      width: 29%;
+      height: 15%;
+      top: 58%;
+      border-radius: 48%;
+      background: var(--brown-light);
+      box-shadow:
+        inset -5px -6px 0 rgba(86,43,26,.07),
+        0 7px 12px var(--shadow);
+      z-index: 7;
+      transition:
+        transform 2.2s cubic-bezier(.23,.78,.18,1),
+        top 2.2s cubic-bezier(.23,.78,.18,1),
+        left 2.2s cubic-bezier(.23,.78,.18,1),
+        right 2.2s cubic-bezier(.23,.78,.18,1);
+    }
+
+    /* Both arms use the same angle, but opposite anchor points.
+       This keeps the closed and open positions perfectly mirrored. */
+    .arm.left {
+      left: 27%;
+      top: 63%;
+      transform-origin: 8% 18%;
+      transform: rotate(8deg);
+    }
+
+    .arm.right {
+      right: 27%;
+      top: 63%;
+      transform-origin: 92% 18%;
+      transform: rotate(-8deg);
+    }
+
+    .arm::after {
+      content: "";
+      position: absolute;
+      width: 39%;
+      height: 72%;
+      top: 14%;
+      border-radius: 50%;
+      background: var(--cream);
+      opacity: .92;
+    }
+
+    /* Paw pads stay at the free end of each arm. */
+    .arm.left::after { right: 4%; }
+    .arm.right::after { left: 4%; }
+
+    .banner {
+      position: absolute;
+      left: 50%;
+      top: 58.5%;
+
+      /* Matches the distance between the two paw centres when fully open. */
+      width: 84%;
+      height: 18%;
+
+      transform: translate(-50%, -50%) scaleX(.18) scaleY(.8);
+      transform-origin: 50% 50%;
+      opacity: 0;
+      z-index: 7;
+
+      /* Keep the chain visible while its width follows the paw movement. */
+      transition:
+        opacity .22s ease,
+        transform 2.55s cubic-bezier(.23,.78,.18,1);
+
+      pointer-events: none;
+    }
+
+    .string {
+      position: absolute;
+
+      /* The cord now runs exactly from one paw edge to the other. */
+      left: 0;
+      width: 100%;
+      height: 36px;
+      top: 22%;
+
+      border-bottom: 3px solid var(--gold);
+      border-radius: 0 0 120px 120px;
+      background: transparent;
+      box-shadow: 0 1px 2px rgba(91,48,25,.25);
+    }
+
+    .flags {
+      position: absolute;
+      inset: 18px 0 0 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: clamp(2px, .7vw, 5px);
+    }
+
+    .flag {
+      position: relative;
+      width: 7.2%;
+      min-width: 23px;
+      height: 58%;
+      display: grid;
+      place-items: center;
+      padding-bottom: 5px;
+      background: var(--paper);
+      color: var(--brown-dark);
+      font-size: clamp(.72rem, 2.2vw, 1.15rem);
+      font-weight: 900;
+      box-shadow: 0 3px 5px rgba(80,42,22,.17);
+      clip-path: polygon(0 0, 100% 0, 100% 78%, 50% 100%, 0 78%);
+      transform: translateY(var(--drop, 0px)) rotate(var(--tilt, 0deg));
+    }
+
+    .heart {
+      position: absolute;
+      font-size: clamp(24px, 6vw, 44px);
+      opacity: 0;
+      z-index: 8;
+      pointer-events: none;
+    }
+
+    .heart.h1 { left: 10%; top: 44%; }
+    .heart.h2 { right: 9%; top: 37%; }
+    .heart.h3 { left: 20%; top: 18%; }
+    .heart.h4 { right: 20%; top: 16%; }
+
+    .instruction {
+      position: absolute;
+      left: 50%;
+      bottom: clamp(18px, 4vh, 36px);
+      transform: translateX(-50%);
+      width: min(90vw, 520px);
+      text-align: center;
+      font-size: clamp(.9rem, 2.5vw, 1.05rem);
+      color: rgba(90,44,29,.72);
+      transition: opacity .4s ease;
+      z-index: 10;
+    }
+
+    .open .arm.left {
+      top: 63%;
+      left: 27%;
+      transform: rotate(180deg);
+    }
+
+    .open .arm.right {
+      top: 63%;
+      right: 27%;
+      transform: rotate(-180deg);
+    }
+
+    .open .banner {
+      opacity: 1;
+      transform: translate(-50%, -50%) scaleX(1) scaleY(1);
+
+      /* Become visible quickly, then unfold just a little slower than the paws. */
+      transition:
+        opacity .22s ease,
+        transform 2.55s cubic-bezier(.23,.78,.18,1);
+    }
+
+    .open .instruction {
+      opacity: .55;
+    }
+
+    .open .heart {
+      animation: floatHeart 3.2s ease-in-out infinite;
+    }
+
+    .open .heart.h1 { animation-delay: 0s; }
+    .open .heart.h2 { animation-delay: .35s; }
+    .open .heart.h3 { animation-delay: .7s; }
+    .open .heart.h4 { animation-delay: 1.05s; }
+
+    .open .bear {
+      animation: happyBounce 1.2s ease;
+    }
+
+    .confetti {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 30;
+      overflow: hidden;
+    }
+
+    .piece {
+      position: absolute;
+      top: -20px;
+      width: 9px;
+      height: 15px;
+      border-radius: 2px;
+      animation: confettiFall var(--duration) linear forwards;
+      transform: translate3d(0,0,0) rotate(0deg);
+    }
+
+    @keyframes happyBounce {
+      0%, 100% { transform: translateY(0) scale(1); }
+      35% { transform: translateY(-12px) scale(1.02); }
+      65% { transform: translateY(2px) scale(.995); }
+    }
+
+    @keyframes floatHeart {
+      0% { opacity: 0; transform: translateY(12px) scale(.7) rotate(-7deg); }
+      30% { opacity: .9; }
+      70% { opacity: .7; }
+      100% { opacity: 0; transform: translateY(-38px) scale(1.2) rotate(8deg); }
+    }
+
+    @keyframes confettiFall {
+      to {
+        transform: translate3d(var(--drift), 110vh, 0) rotate(var(--spin));
+      }
+    }
+
+    @media (max-height: 700px) {
+      .scene {
+        width: min(78vh, 520px);
+      }
+
+      .top-copy {
+        top: 12px;
+      }
+
+      .top-copy p {
+        display: none;
+      }
+
+      .instruction {
+        bottom: 10px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+    }
+
+
+    /* ===== Two-sided birthday card ===== */
+    .page { padding: 96px 18px 64px; }
+
+    .card-shell {
+      position: relative;
+      width: min(94vw, 620px);
+      height: 650px;
+      perspective: 1500px;
+      z-index: 5;
+      transition: height .35s ease;
+    }
+
+    .birthday-card {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform-style: preserve-3d;
+      transition: transform 1.2s cubic-bezier(.2,.72,.2,1);
+    }
+
+    .birthday-card.flipped { transform: rotateY(180deg); }
+
+    .card-front { pointer-events: auto; }
+    .card-back { pointer-events: none; }
+    .birthday-card.flipped .card-front { pointer-events: none; }
+    .birthday-card.flipped .card-back { pointer-events: auto; }
+
+    .card-face {
+      position: absolute;
+      inset: 0;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      border-radius: 30px;
+      background: rgba(255,253,248,.94);
+      border: 1px solid rgba(155,96,56,.16);
+      box-shadow: 0 24px 70px rgba(87,47,30,.24);
+      overflow: hidden;
+    }
+
+    .card-front {
+      display: grid;
+      place-items: center;
+      cursor: pointer;
+    }
+
+    .card-front::before,
+    .card-back::before {
+      content: "";
+      position: absolute;
+      inset: 12px;
+      border: 2px dashed rgba(224,170,77,.36);
+      border-radius: 22px;
+      pointer-events: none;
+    }
+
+    .card-front .scene {
+      width: min(100%, 560px);
+      height: 100%;
+      aspect-ratio: auto;
+    }
+
+    .card-back {
+      transform: rotateY(180deg);
+      display: grid;
+      place-items: center;
+      padding: clamp(34px, 7vw, 64px);
+      text-align: center;
+      background:
+        radial-gradient(circle at 20% 15%, rgba(243,166,170,.25), transparent 28%),
+        radial-gradient(circle at 85% 85%, rgba(224,170,77,.22), transparent 30%),
+        var(--paper);
+    }
+
+    .wish-content {
+      position: relative;
+      z-index: 2;
+      width: min(100%, 470px);
+      max-height: none;
+      overflow: visible;
+      padding: 4px 4px 12px;
+    }
+
+    .wish-content .mini-heart {
+      font-size: clamp(1.9rem, 7vw, 3.2rem);
+      margin-bottom: 4px;
+      animation: gentlePulse 3s ease-in-out infinite;
+    }
+
+    .wish-content h2 {
+      margin: 0 0 14px;
+      font-family: "Great Vibes", cursive;
+      font-size: clamp(2rem, 7vw, 3.3rem);
+      line-height: 1.05;
+      color: #e75480;
+      animation: gentlePulse 3s ease-in-out infinite;
+    }
+
+    .wish-content p {
+      margin: 0;
+      font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+      font-size: clamp(.92rem, 3.5vw, 1.08rem);
+      line-height: 1.62;
+      color: #5f4037;
+    }
+
+    .wish-content strong {
+      color: #6b3348;
+      font-weight: 800;
+    }
+
+    .wish-content .signature {
+      margin-top: 14px;
+      color: #9a6d78;
+      font-size: clamp(.85rem, 3.2vw, .98rem);
+      line-height: 1.45;
+    }
+
+    @keyframes gentlePulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.025); }
+    }
+
+    .back-button {
+      position: absolute;
+      left: 50%;
+      bottom: 28px;
+      transform: translateX(-50%);
+      z-index: 3;
+      border: 0;
+      border-radius: 999px;
+      padding: 12px 24px;
+      background: var(--brown);
+      color: white;
+      font: inherit;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 8px 18px rgba(90,44,29,.25);
+    }
+
+    .back-button:active { transform: translateX(-50%) scale(.97); }
+
+    .instruction { bottom: 18px; }
+
+    @media (max-height: 700px) {
+      .page { padding-top: 72px; padding-bottom: 48px; }
+      .card-shell { width: min(94vw, 620px); }
+      .card-front .scene { width: min(88vh, 520px); }
+      .back-button { bottom: 18px; }
+    }
+
+    /* iPhone 13 and similar phones: 390 × 844 CSS pixels */
+    @media (max-width: 430px) {
+      body { overflow-x: hidden; overflow-y: auto; }
+      .page { padding: 76px 12px 50px; }
+      .top-copy { top: 14px; width: 94vw; }
+      .top-copy h1 { font-size: clamp(1.35rem, 6vw, 1.75rem); }
+      .top-copy p { margin-top: 5px; font-size: .82rem; }
+      .card-shell {
+        width: min(94vw, 390px);
+      }
+      .card-face { border-radius: 24px; }
+      .card-front::before, .card-back::before { inset: 9px; border-radius: 18px; }
+      .card-back { padding: 26px 23px 76px; }
+      .wish-content h2 { margin-bottom: 10px; }
+      .wish-content p { font-size: clamp(.86rem, 3.65vw, .98rem); line-height: 1.52; }
+      .wish-content .signature { margin-top: 10px; }
+      .back-button { bottom: 19px; padding: 11px 20px; font-size: .9rem; }
+      .instruction { bottom: 10px; width: 94vw; font-size: .82rem; }
+    }
+
+    @media (width: 390px) and (height: 844px) {
+      .page { padding: 72px 10px 46px; }
+      .card-shell {
+        width: 370px;
+      }
+      .card-front .scene { width: 100%; }
+      .card-back { padding: 25px 22px 74px; }
+      .wish-content p { font-size: .92rem; line-height: 1.5; }
+      .instruction { bottom: 8px; }
+    }
+
+    @media (max-width: 430px) and (max-height: 760px) {
+      .page { padding-top: 62px; }
+      .top-copy p { display: none; }
+      .card-shell { width: min(94vw, 390px); }
+      .card-back { padding: 22px 20px 66px; }
+      .wish-content .mini-heart { font-size: 1.7rem; }
+      .wish-content h2 { font-size: 1.9rem; }
+      .wish-content p { font-size: .82rem; line-height: 1.45; }
+    }
+
+  </style>
+</head>
+
+<body>
+  <!--
+    Place your birthday song in the same folder as this HTML file
+    and name it: happy-birthday.mp3
+  -->
+  <audio id="birthdayMusic" preload="auto">
+    <source src="happy-birthday.mp3" type="audio/mpeg">
+    Your browser does not support audio playback.
+  </audio>
+
+  <main class="page" id="page">
+    <header class="top-copy">
+      <h1>For My Beautiful Sanduni 💗</h1>
+      <p>A tiny birthday surprise made with lots of love.</p>
+    </header>
+
+    <div class="card-shell" id="cardShell">
+      <div class="birthday-card" id="birthdayCard">
+        <section class="card-face card-front" id="cardFront" role="button" tabindex="0" aria-label="Interactive birthday teddy card">
+          <section class="scene" id="scene">
+            <div class="halo"></div>
+
+            <button class="bear-button" id="bearButton" type="button"
+              aria-label="Open the teddy bear's arms" aria-expanded="false">
+              <div class="bear" aria-hidden="true">
+                <div class="ear left"></div><div class="ear right"></div>
+                <div class="body"><div class="belly"></div></div>
+                <div class="head">
+                  <div class="brow left"></div><div class="brow right"></div>
+                  <div class="eye left"></div><div class="eye right"></div>
+                  <div class="blush left"></div><div class="blush right"></div>
+                  <div class="muzzle"><div class="nose"></div><div class="mouth"></div></div>
+                </div>
+                <div class="arm left"></div><div class="arm right"></div>
+                <div class="leg left"><div class="paw-pad"><span class="toe t1"></span><span class="toe t2"></span><span class="toe t3"></span></div></div>
+                <div class="leg right"><div class="paw-pad"><span class="toe t1"></span><span class="toe t2"></span><span class="toe t3"></span></div></div>
+                <div class="banner"><div class="string"></div><div class="flags" id="flags"></div></div>
+              </div>
+            </button>
+
+            <span class="heart h1">💗</span><span class="heart h2">✨</span>
+            <span class="heart h3">💕</span><span class="heart h4">✨</span>
+          </section>
+        </section>
+
+        <section class="card-face card-back" id="cardBack" aria-label="Romantic birthday message">
+          <div class="wish-content">
+            <div class="mini-heart">💖</div>
+            <h2>Happy 21st Birthday<br>My Love! 🎂</h2>
+            <p>
+              Happy Birthday, my සුදු මැණික... 🎂❤️<br><br>
+
+              I'm so thankful to have you in my life. Your smile, your love, and the happiness you bring make every day so much more beautiful. 🥹💕<br><br>
+
+              Through every moment, we keep choosing each other and loving each other more than ever. ❤️<br><br>
+
+              The best chapters of our story are still waiting to be written together. ✨<br><br>
+
+              Happy Birthday, my queen. I love you always. 🤍
+            </p>
+            <div class="signature">With all my love,<br><strong>Sahan</strong> 💌</div>
+          </div>
+          <button class="back-button" id="backButton" type="button">← Back to Teddy</button>
+        </section>
+      </div>
+    </div>
+
+    <p class="instruction" id="instruction">Tap the card to open the surprise 🧸</p>
+    <div class="confetti" id="confetti" aria-hidden="true"></div>
+  </main>
+
+  <script>
+    const birthdayMessage = "HAPPY BIRTHDAY";
+    const page = document.getElementById("page");
+    const birthdayCard = document.getElementById("birthdayCard");
+    const cardShell = document.getElementById("cardShell");
+    const cardBack = document.getElementById("cardBack");
+    const cardFront = document.getElementById("cardFront");
+    const bearButton = document.getElementById("bearButton");
+    const backButton = document.getElementById("backButton");
+    const instruction = document.getElementById("instruction");
+    const flagsContainer = document.getElementById("flags");
+    const confettiContainer = document.getElementById("confetti");
+    const birthdayMusic = document.getElementById("birthdayMusic");
+
+    let stage = "closed";
+    let musicStarted = false; // closed -> open -> message -> closed
+    let tapLocked = false;
+
+    [...birthdayMessage].forEach((character, index) => {
+      if (character === " ") {
+        const gap = document.createElement("span");
+        gap.style.width = "2.8%";
+        flagsContainer.appendChild(gap);
+        return;
+      }
+
+      const flag = document.createElement("span");
+      flag.className = "flag";
+      flag.textContent = character;
+
+      const lettersOnly = birthdayMessage.replaceAll(" ", "");
+      const visibleIndex = [...birthdayMessage.slice(0, index)].filter(c => c !== " ").length;
+      const center = (lettersOnly.length - 1) / 2;
+      const distance = Math.abs(visibleIndex - center) / Math.max(center, 1);
+
+      flag.style.setProperty("--drop", `${(1 - distance * distance) * 18}px`);
+      flag.style.setProperty("--tilt", `${Math.sin(index * 1.4) * 4}deg`);
+      flagsContainer.appendChild(flag);
+    });
+
+    function syncCardHeight() {
+      // Measure both sides and give the 3D card enough room for whichever is taller.
+      // This removes internal scrolling and lets the page itself scroll on short screens.
+      const frontHeight = cardFront.scrollHeight;
+      const backHeight = cardBack.scrollHeight;
+      const responsiveMinimum = window.innerWidth <= 430 ? 650 : 620;
+      cardShell.style.height = `${Math.max(frontHeight, backHeight, responsiveMinimum)}px`;
+    }
+
+    function createConfetti() {
+      const colors = ["#f3a6aa", "#e0aa4d", "#9b6038", "#f8d7ab", "#ffffff", "#d9879d"];
+
+      for (let i = 0; i < 18; i++) {
+        const piece = document.createElement("span");
+        piece.className = "piece";
+        piece.style.left = `${Math.random() * 100}%`;
+        piece.style.background = colors[Math.floor(Math.random() * colors.length)];
+        piece.style.setProperty("--duration", `${4 + Math.random() * 2}s`);
+        piece.style.setProperty("--drift", `${-80 + Math.random() * 160}px`);
+        piece.style.setProperty("--spin", `${360 + Math.random() * 650}deg`);
+        piece.style.animationDelay = `${Math.random() * 0.18}s`;
+        piece.style.opacity = `${0.5 + Math.random() * 0.3}`;
+        confettiContainer.appendChild(piece);
+        window.setTimeout(() => piece.remove(), 6500);
+      }
+    }
+
+    function lockTap(milliseconds = 280) {
+      tapLocked = true;
+      window.setTimeout(() => { tapLocked = false; }, milliseconds);
+    }
+
+    function openBear() {
+      if (tapLocked || stage !== "closed") return;
+      // Keep the second tap disabled until the 2.2s reveal finishes,
+      // plus a gentle 0.5s pause so the surprise can be enjoyed.
+      lockTap(2700);
+      stage = "open";
+      page.classList.add("open");
+      bearButton.setAttribute("aria-expanded", "true");
+      bearButton.setAttribute("aria-label", "Flip the card to read the birthday wish");
+      instruction.textContent = "Tap again to read the birthday wish 💕";
+      createConfetti();
+      if ("vibrate" in navigator) navigator.vibrate([40, 35, 80]);
+    }
+
+    function showMessage() {
+      if (tapLocked || stage !== "open") return;
+      lockTap(1250);
+      stage = "message";
+      birthdayCard.classList.add("flipped");
+      birthdayCard.setAttribute("aria-label", "Romantic birthday wish");
+      instruction.textContent = "A message from my heart 💗";
+
+      // Start the song only on the first flip to the message.
+      // Returning to the teddy or flipping again will not pause or restart it.
+      if (!musicStarted) {
+        musicStarted = true;
+        birthdayMusic.volume = 0.35;
+        birthdayMusic.play().catch(error => {
+          console.warn("Audio playback could not start:", error);
+          musicStarted = false;
+        });
+      }
+    }
+
+    function resetCard() {
+      if (stage !== "message") return;
+      stage = "closed";
+      birthdayCard.classList.remove("flipped");
+      page.classList.remove("open");
+      bearButton.setAttribute("aria-expanded", "false");
+      bearButton.setAttribute("aria-label", "Open the teddy bear's arms");
+      birthdayCard.setAttribute("aria-label", "Interactive birthday teddy card");
+      instruction.textContent = "Tap the card to open the surprise 🧸";
+      lockTap(1250);
+    }
+
+    function activateFront() {
+      if (tapLocked) return;
+      if (stage === "closed") openBear();
+      else if (stage === "open") showMessage();
+    }
+
+    // One click path only. This avoids nested click handlers firing twice.
+    cardFront.addEventListener("click", activateFront);
+
+    cardFront.addEventListener("keydown", event => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        activateFront();
+      }
+    });
+
+    backButton.addEventListener("click", event => {
+      event.preventDefault();
+      event.stopPropagation();
+      resetCard();
+    });
+
+    // Recalculate after fonts load and whenever the viewport changes orientation/size.
+    window.addEventListener("load", syncCardHeight);
+    window.addEventListener("resize", syncCardHeight);
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(syncCardHeight);
+    } else {
+      syncCardHeight();
+    }
+  </script>
+</body>
+</html>
