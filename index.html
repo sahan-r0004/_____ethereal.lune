@@ -967,6 +967,18 @@
       bearButton.setAttribute("aria-label", "Flip the card to read the birthday wish");
       instruction.textContent = "Tap again to read the birthday wish 💕";
       createConfetti();
+
+      // Start the birthday song only on the very first tap.
+      // Later card flips and returns to the teddy will not pause or restart it.
+      if (!musicStarted) {
+        musicStarted = true;
+        birthdayMusic.volume = 0.35;
+        birthdayMusic.play().catch(error => {
+          console.warn("Audio playback could not start:", error);
+          musicStarted = false;
+        });
+      }
+
       if ("vibrate" in navigator) navigator.vibrate([40, 35, 80]);
     }
 
@@ -977,17 +989,6 @@
       birthdayCard.classList.add("flipped");
       birthdayCard.setAttribute("aria-label", "Romantic birthday wish");
       instruction.textContent = "A message from my heart 💗";
-
-      // Start the song only on the first flip to the message.
-      // Returning to the teddy or flipping again will not pause or restart it.
-      if (!musicStarted) {
-        musicStarted = true;
-        birthdayMusic.volume = 0.35;
-        birthdayMusic.play().catch(error => {
-          console.warn("Audio playback could not start:", error);
-          musicStarted = false;
-        });
-      }
     }
 
     function resetCard() {
